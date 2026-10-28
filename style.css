@@ -1,0 +1,181 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #1e293b;
+  background: #eef4ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #1e293b12;
+}
+
+h1 {
+  margin: 0 0 6px;
+  color: #2563eb;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: #64748b;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.progress-section {
+  margin-top: 26px;
+}
+
+#progressText {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.progress-track {
+  height: 10px;
+  overflow: hidden;
+  background: #dbeafe;
+  border-radius: 10px;
+}
+
+#progressBar {
+  width: 0;
+  height: 100%;
+  background: #2563eb;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+#taskList {
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #2563eb;
+}
+
+.task-text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.task-item.done .task-text {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  flex-shrink: 0;
+  background: #ef4444;
+}
+
+.delete-button:hover {
+  background: #dc2626;
+}
+
+#emptyMessage {
+  padding: 16px 0;
+  color: #94a3b8;
+  text-align: center;
+}
+
+footer {
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 16px 10px;
+  }
+
+  .container {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .input-row {
+    gap: 6px;
+  }
+
+  .input-row button {
+    padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #progressBar {
+    transition: none;
+  }
+  }
