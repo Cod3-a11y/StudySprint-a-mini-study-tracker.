@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudySprint is a simple daily study task tracker.">
+  <title>StudySprint | Daily Study Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>StudySprint 📚</h1>
+      <p class="subtitle">Small steps. Real progress.</p>
+    </header>
+
+    <form id="taskForm" class="input-row">
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="Enter a study task..."
+        maxlength="120"
+        aria-label="New study task"
+        required
+      >
+      <button type="submit">Add Task</button>
+    </form>
+
+    <section class="progress-section" aria-labelledby="progressHeading">
+      <h2 id="progressHeading">Today's Progress</h2>
+      <p id="progressText" aria-live="polite">
+        0 of 0 tasks completed (0%)
+      </p>
+
+      <div
+        class="progress-track"
+        role="progressbar"
+        aria-label="Study task completion"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progressTrack"
+      >
+        <div id="progressBar"></div>
+      </div>
+    </section>
+
+    <section aria-label="Study tasks">
+      <ul id="taskList"></ul>
+      <p id="emptyMessage">No tasks yet. Add your first one!</p>
+    </section>
+
+    <footer>
+      <p>One task at a time. You've got this!</p>
+    </footer>
+  </main>
+</body>
+  </html>
+  
